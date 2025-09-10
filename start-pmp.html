@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إعادة توجيه…</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <!-- GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MZLCM42L');</script>
+  <style>
+    :root { --brand:#294a72; }
+    body{margin:0;font-family:"Cairo",sans-serif;background:#fff;color:var(--brand);
+         display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+    .wrap{padding:28px}
+    .logo{width:200px;max-width:42vw;height:auto;display:block;margin:0 auto 20px}
+    h1{margin:0 0 10px;font-size:28px;font-weight:700;color:var(--brand)}
+    p{margin:0 0 12px;font-size:18px}
+    a.fallback{font-size:14px;color:var(--brand);text-decoration:underline}
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZLCM42L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="wrap">
+    <img src="logo.png" alt="Dar Alruaa Logo" class="logo">
+    <h1>يتم تحويلك الآن إلى نموذج التسجيل لدورة إدارة المشاريع (PMP)</h1>
+    <p>لحظات قليلة</p>
+    <a class="fallback" href="https://daralruaa.typeform.com/to/UOFnSp5S?utm_source=site&utm_medium=start">اضغط هنا إذا لم يتم التحويل</a>
+  </div>
+  <script>
+    const DEST="https://daralruaa.typeform.com/to/UOFnSp5S?utm_source=site&utm_medium=start";
+
+    // Listen for GTM to signal Snap StartCheckout fired
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'redirect_after_start',
+      callback: function(){
+        setTimeout(()=>{ window.location.replace(DEST); }, 100);
+      }
+    });
+
+    // Backup redirect at 2s in case Snap/GTM fail
+    setTimeout(()=>{ if(location.href.indexOf("typeform.com")===-1) window.location.replace(DEST); },2000);
+  </script>
+</body>
+</html>
