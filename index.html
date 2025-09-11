@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>التسجيل في الدورات</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --brand:#294a72; --btn:#28a745; --btnH:#218838; --footer:#f2f2f2; }
+
+    /* Reset & base */
+    html, body { margin:0; padding:0; }
+    body { font-family:"Cairo", sans-serif; background:#fff; color:#000; }
+
+    /* Layout */
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Header */
+    .logo { max-width:160px; height:auto; margin:0 auto 16px; display:block; }
+    h1 { margin:0; font-size:28px; font-weight:700; color:var(--brand); }
+    h2 { margin:10px 0 30px; font-size:18px; color:#555; }
+
+    /* Buttons */
+    .btn {
+      display:inline-block;
+      margin: 12px;
+      padding: 18px 36px;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: var(--btn);
+      color:#fff;
+      text-decoration:none;
+      border-radius:10px;
+      box-shadow:0 4px 6px rgba(0,0,0,.2);
+      transition: all .25s ease;
+      cursor:pointer;
+    }
+    .btn:hover { background-color: var(--btnH); transform: translateY(-3px); box-shadow:0 6px 10px rgba(0,0,0,.3); }
+
+    /* Footer (full-width) */
+    footer {
+      background: var(--footer);
+      width:100%;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .footer-logos {
+      display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; margin-bottom:16px;
+    }
+    .footer-logos img { max-height:90px; width:auto; }
+    .contact { display:flex; justify-content:center; align-items:center; gap:10px; font-size:18px; margin-bottom:14px; }
+    .contact img.wa-icon { width:32px; height:32px; }
+    .rights { font-size:14px; color:#555; }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <!-- Logo -->
+    <img src="logo.png" alt="Dar Alruaa Logo" class="logo">
+
+    <!-- Headings -->
+    <h1>مركز دار الرؤى للتدريب</h1>
+    <h2>400k+ متدرب خلال 20+ سنة</h2>
+
+    <!-- Buttons -->
+    <a id="btn-tot" href="https://daralruaa.typeform.com/to/NSIWPFSf" class="btn">
+      التسجيل في دورة تدريب المدربين (TOT)
+    </a>
+
+    <a id="btn-pmp" href="https://daralruaa.typeform.com/to/UOFnSp5S" class="btn">
+      التسجيل في دورة إدارة المشاريع (PMP)
+    </a>
+  </div>
+
+  <!-- Footer (full width) -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="logo1.png" alt="شعار صندوق تنمية الموارد البشرية">
+        <img src="logo2.png" alt="شعار المؤسسة العامة للتدريب التقني والمهني">
+      </div>
+      <div class="contact">
+        <a href="https://wa.me/+966506196695" target="_blank" style="text-decoration:none; color:#000; display:flex; align-items:center; gap:10px;">
+          <img src="whatsapp.png" alt="WhatsApp" class="wa-icon">
+          <span>تواصل معنا</span>
+        </a>
+      </div>
+      <div class="rights">جميع الحقوق محفوظة لمركز دار الرؤى للتدريب</div>
+    </div>
+  </footer>
+
+  <!-- UTM pass-through: append any UTM params from page URL to Typeform links -->
+  <script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const hasUTM = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+                      .some(k => params.has(k));
+
+      // Set defaults if no UTM present (so you still get attribution in Typeform)
+      if (!hasUTM) {
+        params.set('utm_source','website');
+        params.set('utm_medium','organic');
+        // optional, uncomment to track page context:
+        // params.set('utm_campaign','site_landing');
+      }
+
+      function appendParams(baseUrl) {
+        const url = new URL(baseUrl);
+        // keep any existing params on the base URL, then append our params
+        params.forEach((v,k)=>{ if(!url.searchParams.has(k)) url.searchParams.set(k,v); });
+        return url.toString();
+      }
+
+      const btnTOT = document.getElementById('btn-tot');
+      const btnPMP = document.getElementById('btn-pmp');
+
+      if (btnTOT) btnTOT.href = appendParams(btnTOT.href);
+      if (btnPMP) btnPMP.href = appendParams(btnPMP.href);
+    })();
+  </script>
+
+</body>
+</html>
