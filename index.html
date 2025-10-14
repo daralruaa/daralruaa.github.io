@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>التسجيل في الدورات</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --brand:#294a72; --btn:#28a745; --btnH:#218838; --footer:#f2f2f2; }
+
+    /* Reset & base */
+    html, body { margin:0; padding:0; }
+    body { font-family:"Cairo", sans-serif; background:#fff; color:#000; }
+
+    /* Layout */
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Header */
+    .logo { max-width:160px; height:auto; margin:0 auto 16px; display:block; }
+    h1 { margin:0; font-size:28px; font-weight:700; color:var(--brand); }
+    h2 { margin:10px 0 30px; font-size:18px; color:#555; }
+
+    /* Buttons */
+    .btn {
+      display:inline-block;
+      margin: 12px;
+      padding: 18px 36px;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: var(--btn);
+      color:#fff;
+      text-decoration:none;
+      border-radius:10px;
+      box-shadow:0 4px 6px rgba(0,0,0,.2);
+      transition: all .25s ease;
+      cursor:pointer;
+    }
+    .btn:hover { background-color: var(--btnH); transform: translateY(-3px); box-shadow:0 6px 10px rgba(0,0,0,.3); }
+
+    /* Footer (full-width) */
+    footer {
+      background: var(--footer);
+      width:100%;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .footer-logos {
+      display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; margin-bottom:16px;
+    }
+    .footer-logos img { max-height:90px; width:auto; }
+    .contact { display:flex; justify-content:center; align-items:center; gap:10px; font-size:18px; margin-bottom:14px; }
+    .contact img.wa-icon { width:32px; height:32px; }
+    .rights { font-size:14px; color:#555; }
+  
+/* Static About section at bottom */
+.about-static{
+  max-width: 820px;
+  margin: 16px auto 18px;
+  text-align: center;
+  color: #000;
+}
+.about-static h3{
+  margin: 6px 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #294a72;
+}
+.about-static p{
+  margin: 6px 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #000;
+}
+
+/* Center Contact button under About section */
+.about-contact-wrap{ text-align:center; margin: 10px 0 18px; }
+.about-contact-wrap a, .about-contact-wrap button{ margin: 0 auto; }
+
+/* Ensure Contact button is under About section (not beside) */
+.about-static{ display:block; width:100%; float:none; }
+.about-contact-wrap{ clear:both; display:block; width:100%; text-align:center; margin: 14px 0 20px; }
+.about-contact-wrap a, .about-contact-wrap button{ display:inline-block; }
+
+/* Center the About section and Contact button at bottom */
+.about-static{
+  max-width: 760px;
+  margin: 18px auto 22px !important;
+  text-align: center !important;
+}
+.about-static p{
+  text-align: center !important;
+}
+.about-contact-wrap{
+  text-align: center !important;
+  margin-top: 14px !important;
+  margin-bottom: 20px !important;
+}
+.about-contact-wrap a, .about-contact-wrap button{
+  margin: 0 auto !important;
+}
+
+/* Strong centering for About section at bottom */
+.about-static{
+  max-width: 900px;
+  margin: 18px auto 26px !important;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+}
+.about-static h3{ margin: 6px 0 10px; font-size: 22px; font-weight: 800; }
+.about-static p{
+  max-width: 680px;
+  margin: 6px auto;
+  text-align: center !important;
+  line-height: 1.9;
+  color: #000;
+}
+.about-contact-wrap{
+  width: 100%;
+  display: block;
+  text-align: center !important;
+  margin-top: 16px !important; /* extra space between text and button */
+  margin-bottom: 24px !important;
+}
+.about-contact-wrap a, .about-contact-wrap button{
+  margin: 0 auto !important;
+  display: inline-block;
+  float: none;
+}
+
+/* --- Strong centering & spacing fixes for bottom About block --- */
+.about-static{
+  clear: both !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+.about-static *{
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+.about-static p{
+  max-width: 680px !important;
+  line-height: 1.9;
+}
+.about-contact-wrap{
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px;
+  margin-top: 30px !important; /* extra space requested */
+  margin-bottom: 28px !important;
+  clear: both !important;
+}
+.about-contact-wrap a, .about-contact-wrap button{
+  float: none !important;
+  display: inline-block !important;
+  margin: 0 auto !important;
+}
+</style>
+</head>
+<body>
+<div class="content">
+<!-- Logo -->
+<img alt="Dar Alruaa Logo" class="logo" src="logo.png"/>
+<!-- Headings -->
+<h1>مركز دار الرؤى للتدريب</h1>
+<h2>400k+ متدرب خلال 20+ سنة</h2>
+<!-- Buttons -->
+<a class="btn" href="https://daralruaa.typeform.com/to/NSIWPFSf" id="btn-tot">
+      التسجيل في دورة تدريب المدربين (TOT)
+    </a>
+<a class="btn" href="https://daralruaa.typeform.com/to/UOFnSp5S" id="btn-pmp">
+      التسجيل في دورة إدارة المشاريع (PMP)
+    </a>
+</div>
+<!-- Footer (full width) -->
+<footer>
+<div class="footer-inner">
+<div class="footer-logos">
+<img alt="شعار صندوق تنمية الموارد البشرية" src="logo1.png"/>
+<img alt="شعار المؤسسة العامة للتدريب التقني والمهني" src="logo2.png"/>
+</div>
+<div class="contact">
+<section class="about-static" dir="rtl" id="about" lang="ar"><h3>من نحن</h3><p>منذ انطلاقتنا عام 2004، عملنا في مركز دار الرؤى للتدريب على تمكين الأفراد والمنشآت عبر برامج تدريبية معتمدة وعملية. اليوم، تجاوز أثرنا 400 ألف متدرب، وقدّمنا أكثر من 1,000 دورة صُمِّمت لتلبية احتياجات السوق المحلي وتوجهات المستقبل.</p><p>نحن معتمدون من المؤسسة العامة للتدريب التقني والمهني، ونختار مدربين ذوي خبرة ميدانية وقدرات تعليمية عالية لضمان تقديم محتوى ثريّ، وأسلوب تفاعلي، ومخرجات قابلة للتطبيق مباشرةً في بيئة العمل.</p><div class="about-contact-wrap"><a href="https://wa.me/+966506196695" style="text-decoration:none; color:#000; display:flex; align-items:center; gap:10px;" target="_blank">
+<img alt="WhatsApp" class="wa-icon" src="whatsapp.png"/>
+<span>تواصل معنا</span>
+</a></div></section><div class="about-contact-wrap"></div>
+</div>
+<div class="rights">جميع الحقوق محفوظة لمركز دار الرؤى للتدريب</div>
+</div>
+</footer>
+<!-- UTM pass-through: append any UTM params from page URL to Typeform links -->
+<script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const hasUTM = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+                      .some(k => params.has(k));
+
+      // Set defaults if no UTM present (so you still get attribution in Typeform)
+      if (!hasUTM) {
+        params.set('utm_source','website');
+        params.set('utm_medium','organic');
+        // optional, uncomment to track page context:
+        // params.set('utm_campaign','site_landing');
+      }
+
+      function appendParams(baseUrl) {
+        const url = new URL(baseUrl);
+        // keep any existing params on the base URL, then append our params
+        params.forEach((v,k)=>{ if(!url.searchParams.has(k)) url.searchParams.set(k,v); });
+        return url.toString();
+      }
+
+      const btnTOT = document.getElementById('btn-tot');
+      const btnPMP = document.getElementById('btn-pmp');
+
+      if (btnTOT) btnTOT.href = appendParams(btnTOT.href);
+      if (btnPMP) btnPMP.href = appendParams(btnPMP.href);
+    })();
+  </script>
+</body>
+</html>
