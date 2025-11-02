@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مركز دار الرؤى للتدريب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --brand:#294a72; --muted:#6b7280; --green:#4ea053; }
+    html,body{margin:0;padding:0}
+    body{
+      font-family:"Cairo",sans-serif; color:#111; background:#fff;
+      display:flex; flex-direction:column; align-items:center;
+    }
+    .wrap{ width:min(960px,92%); margin:28px auto 48px; text-align:center; }
+    .logo{ width:150px; margin:20px auto 16px; display:block; }
+    h1{ color:var(--brand); font-size:42px; margin:12px 0 6px; font-weight:800; }
+    .sub{ color:var(--muted); font-size:20px; margin:0 0 28px; }
+    h2{ color:var(--brand); font-size:28px; margin:28px 0 14px; font-weight:800; }
+
+    .btn{
+      display:block; width:76%; margin:16px auto; text-decoration:none;
+      background:var(--green); color:#fff; padding:22px 18px; border-radius:14px;
+      font-size:22px; font-weight:800; box-shadow:0 6px 14px rgba(0,0,0,.08);
+      transition:transform .05s ease, box-shadow .2s ease; text-align:center;
+    }
+    .btn:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.12); }
+
+    .about{ margin-top:40px; text-align:center; }
+    .about h3{ margin:0 0 10px; font-size:24px; color:#111; }
+    .about p{ margin:0 auto; max-width:820px; line-height:1.9; font-size:18px; color:#000; }
+
+    /* WhatsApp contact: icon + small text, no background */
+    .contact-link{
+      display:inline-flex; align-items:center; gap:8px;
+      text-decoration:none; background:transparent; padding:0; border:none; box-shadow:none;
+      margin-top:18px;
+    }
+    .contact-link img{ width:28px; height:auto; display:block; }
+    .contact-text{ font-size:14px; color:#111; }
+
+    .footer{ color:#808080; font-size:16px; margin-top:28px }
+
+    @media (max-width:480px){
+      h1{font-size:34px} .sub{font-size:18px}
+      .btn{width:92%; font-size:20px; padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="logo.png" class="logo" alt="DAR AL-RUAA">
+    <h1>مركز دار الرؤى للتدريب</h1>
+    <div class="sub">+400k متدرب خلال +20 سنة</div>
+
+    <!-- الدورات الحالية -->
+    <h2>الدورات الحالية</h2>
+    <a class="btn" href="start-pmp.html">التسجيل في دورة إدارة المشاريع (PMP)</a>
+
+    <!-- الدورات السابقة -->
+    <h2>الدورات السابقة</h2>
+    <a class="btn" href="start-tot.html">دورة تدريب المدربين (TOT)</a>
+    <a class="btn" href="start-6sigma.html">دورة 6 سيجما (6 SIGMA)</a>
+
+    <!-- من نحن + تواصل -->
+    <div class="about" id="about">
+      <h3>من نحن</h3>
+      <p>
+        منذ انطلاقتنا عام 2004، عملنا في مركز دار الرؤى للتدريب على تمكين الأفراد والمنشآت عبر برامج تدريبية معتمدة وعملية.
+        اليوم، تجاوز أثرنا 400 ألف متدرب، وقدّمنا أكثر من 1,000 دورة صُمِّمت لتلبية احتياجات السوق المحلي وتوجهات المستقبل.
+        نحن معتمدون من المؤسسة العامة للتدريب التقني والمهني، ونختار مدربين ذوي خبرة ميدانية وقدرات تعليمية عالية لضمان تقديم محتوى ثريّ،
+        وأسلوب تفاعلي، ومخرجات قابلة للتطبيق مباشرةً في بيئة العمل.
+      </p>
+
+      <!-- Contact (WhatsApp icon + small text, no background) -->
+      <a class="contact-link" href="https://wa.me/966506196695" target="_blank" rel="noopener">
+        <img src="whatsapp.png" alt="WhatsApp">
+        <span class="contact-text">تواصل معنا</span>
+      </a>
+    </div>
+
+    <div class="footer">جميع الحقوق محفوظة لمركز دار الرؤى للتدريب</div>
+  </div>
+</body>
+</html>
