@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إعادة توجيه… (PMP)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Snap Pixel -->
+  <script>
+  !function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function(){a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};a.queue=[];
+  var s="script";var r=t.createElement(s);r.async=!0;r.src=n;var u=t.getElementsByTagName(s)[0];u.parentNode.insertBefore(r,u);}(
+    window,document,"https://sc-static.net/scevent.min.js"
+  );
+  snaptr('init','81d30980-ca5c-45f5-9b01-13e0e22b834c');
+  snaptr('track','PAGE_VIEW');
+  snaptr('track','START_CHECKOUT',{ item_ids:['PMP'], item_category:'course' });
+  </script>
+
+  <style>
+    :root { --brand:#294a72; }
+    html,body { margin:0; padding:0; }
+    body{
+      font-family:"Cairo",sans-serif; background:#fff; color:var(--brand);
+      display:flex; align-items:center; justify-content:center; min-height:100vh; text-align:center;
+    }
+    .wrap { padding:28px }
+    .logo { width:200px; max-width:42vw; margin:0 auto 20px; display:block }
+    h1 { margin:0 0 10px; font-size:26px; font-weight:700; }
+    p { margin:0; font-size:18px; }
+    a.fallback { font-size:14px; color:var(--brand); text-decoration:underline; display:block; margin-top:12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="logo.png" alt="Dar Alruaa Logo" class="logo">
+    <h1>يتم تحويلك الآن إلى نموذج التسجيل لدورة إدارة المشاريع (PMP)</h1>
+    <p>لحظات قليلة</p>
+    <a id="fallback" class="fallback" href="#">اضغط هنا إذا لم يتم التحويل</a>
+  </div>
+
+  <script>
+    (function(){
+      var base = "https://daralruaa.typeform.com/to/TCqpaTiG";
+      var qs = new URLSearchParams(window.location.search);
+      if (!qs.has('utm_source')) qs.set('utm_source','website');
+      if (!qs.has('utm_medium')) qs.set('utm_medium','organic');
+      var dest = base + (base.includes('?') ? '&' : '?') + qs.toString();
+      try {
+        var u = new URL(dest);
+        var clean = new URLSearchParams();
+        u.searchParams.forEach((v,k)=>{ clean.set(k,v); });
+        u.search = clean.toString();
+        dest = u.toString();
+      } catch(e){}
+      var fb = document.getElementById('fallback'); if (fb) fb.href = dest;
+      setTimeout(function(){ window.location.href = dest; }, 600);
+    })();
+  </script>
+</body>
+</html>
